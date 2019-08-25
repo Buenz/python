@@ -1,0 +1,81 @@
+Script started on Sun Jul 14 02:32:54 2019
+[?1034hbash-3.2$ ls[K[Kpwd
+/Users/harrisonbueno/Desktop/NMI
+bash-3.2$ ls
+php-excel-reader-2.21	product_costs.txt
+price.cost.py		typescript
+bash-3.2$ cat p[Kprice.cost.py 
+import os, pandas as pd, math
+
+dirpath = os.getcwd()
+print("Current directory is the following: " + dirpath)
+
+g=input("Please insert path to file + file.txt: ")
+
+print("Please see minimum price below:\n")
+
+#g="/Users/harrisonbueno/Desktop/NMI/product_costs.txt"
+
+file_txt=pd.read_csv(g, sep=" ", header=None)
+
+for i in range(file_txt.shape[0]):
+    print(f"Line {i+1}: {int(math.ceil(file_txt[0][i]/(1-file_txt[1][i])))}")
+bash-3.2$ python price.cost.py 
+Current directory is the following: /Users/harrisonbueno/Desktop/NMI
+Please insert path to file + file.txt: product_cost	s.txt
+Please see minimum price below:
+
+Line 1: 12
+Line 2: 125
+Line 3: 1163776605
+Line 4: 13111735648
+Line 5: 10290369999
+Line 6: 18515466475
+Line 7: 34775270767
+Line 8: 6593935176
+Line 9: 926852450
+Line 10: 25361561365
+Line 11: 5162826905
+Line 12: 15472067519
+Line 13: 1449400335
+Line 14: 21534476795
+Line 15: 9064315634
+Line 16: 1667410054
+Line 17: 1497469784
+Line 18: 1159657077
+Line 19: 687984505200
+Line 20: 15617776588
+Line 21: 7391277615
+Line 22: 20234606011
+Line 23: 14606944707
+Line 24: 20929836652
+Line 25: 18671490119
+Line 26: 4589092918
+Line 27: 10322012429
+Line 28: 80473305712
+Line 29: 9795981433
+Line 30: 7261413377
+Line 31: 79720184125
+Line 32: 1171472335
+Line 33: 3895445543
+Line 34: 5335190127
+Line 35: 2360160429
+Line 36: 8003597191
+Line 37: 685005432
+Line 38: 25734044051
+Line 39: 1435291053
+Line 40: 350692926000
+Line 41: 1163348587
+Line 42: 26031527878
+Line 43: 214769110650
+Line 44: 30038190938
+Line 45: 1530952966
+Line 46: 7538019115
+Line 47: 29527195429
+Line 48: 2541118985
+Line 49: 628350420
+Line 50: 748009201100
+bash-3.2$ exit
+exit
+
+Script done on Sun Jul 14 02:34:15 2019
